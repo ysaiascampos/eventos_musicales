@@ -40,6 +40,7 @@ class SeDarAltaDeConciertoTest extends TestCase
             'id_grupo' => $grupo->id,
             'id_medio' => $medio->id,
         ];
+        
         $concierto = factory(Concierto::class)->make($dataConcierto)->toArray();
 
         $response = $this->withHeaders([
