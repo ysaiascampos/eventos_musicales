@@ -12,8 +12,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-use function PHPUnit\Framework\assertJson;
-
 class SeDarAltaDeConciertoTest extends TestCase
 {
     use RefreshDatabase;
@@ -40,6 +38,7 @@ class SeDarAltaDeConciertoTest extends TestCase
             'id_grupo' => $grupo->id,
             'id_medio' => $medio->id,
         ];
+        
         $concierto = factory(Concierto::class)->make($dataConcierto)->toArray();
 
         $response = $this->withHeaders([

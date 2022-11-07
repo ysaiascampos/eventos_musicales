@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreaTablaGruposMedio extends Migration
+class CreaTablaGruposMedios extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreaTablaGruposMedio extends Migration
      */
     public function up()
     {
-        Schema::create('grupos_medio', function (Blueprint $table) {
+        Schema::create('grupos_medios', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreaTablaGruposMedio extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grupos_medio');
+        Schema::dropIfExists('grupos_medios');
     }
 }
